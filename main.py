@@ -1,18 +1,14 @@
+from cliente import Cliente
 from banco import Banco
+from dinheiro import Dinheiro
+
 banco = Banco()
+cliente = Cliente()
+d = Dinheiro(nome = "", saldo = 0)
+
 while True:
     print("======BANCO======")
-    print("2 - deposito")
-    print("3 - saque")
-    print("digite qualquer outro numero pra sair")
+    nome_input = input("Digite seu nome: ")
     print("=================")
-    try:
-        numero = int(input("digite um numero: "))
-    except ValueError:
-        print("escreva um numero valido")
-        continue  
-    match numero:
-        case 1: banco.Saldo()
-        case 2: banco.Deposito()
-        case 3: banco.Saque()
-        case _: break
+    
+    cliente.confirir_conta(nome_input, banco, d,cliente)

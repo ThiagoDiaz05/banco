@@ -35,7 +35,7 @@ class Banco:
                 d.setSaldo(saldo)
                 self.Saldo()  
             else:
-                print("Você não pode sacar um valor maior do que seu saldo.")
+                print("Você não pode sacar um valor maior do que o seu saldo.")
         else:
             print("O valor precisa ser maior que 0.")
 
